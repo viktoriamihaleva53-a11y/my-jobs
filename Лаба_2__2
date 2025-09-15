@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <locale.h>
+float n = 21;
+float k = 12;
+int main()
+
+{
+	setlocale(LC_ALL, "RUS");
+	printf("Сейчас %.0f часов %.0f минут 00 секунд\n", n, k);
+	printf("Идёт %.0f минута суток\n", k);
+	printf("До полуночи осталось %.0f часов и %.0f минут\n", 24 - n, 60 - k);
+	printf("С 8:00 прошло %.0f секунд\n", k * 60 * (n - 8));
+	printf("Текущий час = %4.3f суток и текущая минута=%2.3f часа\n", n / 24, k / 60);
+}
